@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-
+import axios from "axios";
 /*
   O useState retorna o estado usuario e uma 
   função que altera esse estado [usuario, setUsuario]
@@ -19,6 +19,8 @@ function App(props) {
   const [usuario, setUsuario] = useState("");
   function handlePesquisar(){
     console.log("Pesquisar usuário");
+    axios.get(`https://api.github.com/users/${usuario}`).then(res => console.log(res));
+    
   }
   return (
     <>
