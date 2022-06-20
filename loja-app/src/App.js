@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState} from "react"; // Hook
 import axios from "axios";
 /*
   O useState retorna o estado usuario e uma 
